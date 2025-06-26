@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 #If we need a database:
 '''
@@ -8,7 +9,7 @@ DB_NAME = "database"
 '''
 
 app = Flask(__name__)
-SECRET_KEY = "1234567890102938475629384756384756576574849302SECRETKEY"
+SECRET_KEY = os.getenv("SECRET_KEY", "fallback_secret_key")
 
 def create_app():
     app.config["SECRET_KEY"] = SECRET_KEY
