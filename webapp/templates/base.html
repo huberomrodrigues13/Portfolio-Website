@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Huberom | Developer Portfolio </title>
+    </head>
+
+    <body>
+        <header>
+            <h2>Software & Game Developer Portfolio</h2>
+
+            <div>
+                <a href="/" class="link-card"> HOME </a>
+                <a href="/projects" class="link-card"> PROJECTS </a>
+                <a href="/skills" class="link-card"> SKILLS </a>
+                <a href="/education" class="link-card"> EDUCATION </a>
+            </div>
+        </header>
+        
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+
+        <footer>
+             <h5>© 2025 Huberom Rodrigues • Portfolio</h5>
+        </footer>
+    </body>
+
+</html>
+
+<!-- Base Website Colors and visuals-->
+<style>
+    html, body 
+    {
+        background-color: #121212;  /* Dark charcoal */
+        color: #e0e0e0;             /* Light gray text */
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+    }
+
+        header 
+        {
+            background-color: #1f1f1f;  /* Slightly lighter than body for separation */
+            color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+
+            border-bottom: 1px solid #333;
+        }
+
+        main 
+        {
+            background-color: #181818;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 40px;
+
+            min-height: 80vh; /*Saying the length of 'main' is 80 vertical height*/
+        }
+
+        footer 
+        {
+            background-color: #1a1a1a;
+            color: #bbbbbb;
+            text-align: center;
+            padding: 20px;
+
+            border-top: 1px solid #333;
+        }
+
+    a 
+    {
+        color: #00adb5; /* Accent: teal-blue */
+        text-decoration: none;
+    }
+
+    a:hover 
+    {
+        color: #00ffff; /* Lighter on hover */
+    }
+</style>
+
+
+<!-- All Class visuals/colors -->
+<style>
+    .link-card
+    {
+        background-color: #4743437c;
+        color: #00adb5;
+
+        padding: 10px;
+        border-radius: 20px; 
+        margin: 0px 5px;
+    }
+    .link-card:hover 
+    {
+        background-color: #474343;
+        color: #00ffff;
+    }
+
+
+    .project-container
+    {
+        display: flex;
+        justify-content: center; /* Centers containers */
+        gap: 100px; /* Distances a container from each other */
+        
+        margin-top: 30px;
+ 
+    }
+
+        .project-list 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card-group
+            {
+                background-color: #222;
+                color: #00adb5;
+                padding: 15px; /* Space inside the element (around content) */
+                border-radius: 20px; 
+
+                width: 250px;
+                margin: 5px auto;
+
+                transition: background-color 0.2s, color 0.2s;
+            }   
+            .card-group:hover 
+            {
+                background-color: #2a2a2a;
+                color: #00ffff;
+            }
+</style>
